@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendations </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1170)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height:59px;
+}
+
+#logo {
+  margin:10px 34px;
+}
+#logo img{
+    height:59px;
+    margin:3px 6px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a ,x{
+    margin-left: 10px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin-left: 30px;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/*.dropdown-content a:hover {
+  background-color: #ddd;
+}*/
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#gener{
+    margin: 34px;
+    display: flex;
+}
+#gener .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#gener .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#gener .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+#country{ 
+    position: relative;
+}
+
+#country::before{
+ content: "";
+ position: absolute;
+ background: url('https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?pid=ImgDet&rs=1');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country{
+    padding: 34px;
+}
+
+#country img{
+    height: 124px;
+}
+
+
+
+/* Contact Section */
+
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+/* Navigation */
+/* #navbar {
+    flex-direction: column; 
+} */
+
+/* #navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+    text-decoration: none;
+} */
+/* Home section */
+/* #home{
+    height: 370px; 
+    padding: 3px 28px;
+} */
+
+/* #home::before{
+    height: 480px; 
+} */
+
+/* #home p{
+    font-size: 13px;
+} */
+
+/* Services section  */
+
+
+/* Clients section */
+
+
+/* Contact us section */
+#movie {
+    width:80%;
+}
+/* Footer */
+
+/* Utility classes */
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* page content */
+h1, h2 {
+  color: rgb(225, 57, 96);
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-top: 30vh; 
+}
+
+h2 { font-size: 3rem; }
+
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://wallup.net/wp-content/uploads/2018/09/26/190808-anime_girls-artwork-silver_hair-Touhou-Izayoi_Sakuya.jpg") no-repeat;
+      background-size: cover;
+    }
+}
+
+.search input[type=text]{
+        width:300px;
+        height:50px;
+        border-radius:20px;
+        border: none;
+        font-size: 20px;
+        /* border-color: aqua; */
+        cursor: pointer;
+    }
+         
+    .search{
+        align-items: center;
+        margin-left:600px;
+        margin-top: 70px;
+        border-color: aqua;
+    }
+         
+    .flex-container {
+  display: flex;
+  /* background-color: DodgerBlue; */
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 80px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+.flex-container1 {
+  display: flex;
+  /* background-color: DodgerBlue; */
+}
+
+.flex-container1 > div {
+  background-color: #f1f1f1;
+  margin: 80px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+.flex-container2 {
+  display: flex;
+  /* background-color: DodgerBlue; */
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  margin: 80px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+img {
+  display: block;
+ 
+  height: 200px;
+  width: 200px;
+}
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="https://wallup.net/wp-content/uploads/2018/09/26/190808-anime_girls-artwork-silver_hair-Touhou-Izayoi_Sakuya.jpg">
+        <source src="https://wallup.net/wp-content/uploads/2018/09/26/190808-anime_girls-artwork-silver_hair-Touhou-Izayoi_Sakuya.mp4" type="video/mp4">
+    </video>
+    <div class="navbar">
+        
+        <a class="x" href="saku.html">Home</a> 
+        
+         
+        <!-- <a href="#gener">Gener</a> -->
+        <div class="dropdown">
+            <button class="dropbtn">Gener
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="action.html">Action</a>
+                <a href="drama.html">Drama</a>
+                <a href="romatic.html">Romantic</a>
+        </div> 
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Country
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.bing.com/videos/search?q=indian+anime+movie+link&FORM=HDRSC3">India</a>
+            <a href="https://www.bing.com/videos/search?q=japnes%20anime%20movie%20link&qs=n&form=QBVR&=%25eManage%20Your%20Search%20History%25E&sp=-1&pq=japnes%20anime%20movie%20link&sc=0-23&sk=&cvid=2BAD8D54A0E646B3B941074F419A7B10&ghsh=0&ghacc=0&ghpl=">Japan</a>
+            <a href="#">Brazil</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Movie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">xyz</a>
+              <a href="#">lmn</a>
+              <a href="#">pqr</a>
+            </div>
+          </div>
+        
+    </div>
+      </div>
+</nav>
+<div class="search">
+    <form action="#">
+        <input type="text"
+            placeholder=" Search "
+            name="search">
+       
+    </form>
+</div>
+</div>
+      
+      <h1>THIS IS A ANIME.</h1>
+      <div class="flex-container">
+        <div class="img">
+          <img src="https://th.bing.com/th/id/R.cce294d7ab61b7b4be25bf116835de30?rik=osnG%2f7ctamNnvg&riu=http%3a%2f%2fwww.zoommovie.com%2fdvd1%2fdvd-1-6901.jpg&ehk=FtGZ6j64fhH0oAa2SB30Xvts68gc03SHWWXlB%2bzkbHg%3d&risl=&pid=ImgRaw&r=0.jpg"  >
+        </div>
+       
+          <div class="img">
+            <img src="https://th.bing.com/th/id/OIP._dRK87MYMenCjgmx6hsKZAAAAA?pid=ImgDet&rs=1.jpg">
+          </div>
+          
+            <div class="img">
+              <img src="https://i.pinimg.com/736x/30/25/4d/30254ddf13947af3dfff0db1f41fdc83.jpg">
+            </div> 
+            
+            <div class="img">
+              <img src="https://th.bing.com/th/id/OIP.aj91v_rzCer6OwqSxijzDgHaJI?pid=ImgDet&rs=1.jpg">
+            </div>
+      </div>
+      <div class="flex-container1">
+        <div class="img">
+          <img src="https://th.bing.com/th/id/OIP.xaTi_FP6RuW8MNqZvMa23QAAAA?pid=ImgDet&rs=1.jpg"  >
+        </div>
+       
+          <div class="img">
+            <img src="https://th.bing.com/th/id/R.d5d35cfc957153b4bf14c02983723a76?rik=5CJdDzdYn%2b7Qcg&riu=http%3a%2f%2fvignette2.wikia.nocookie.net%2fvoiceacting%2fimages%2f8%2f8d%2fTales_From_Earthsea_DVD_Cover.jpg%2frevision%2flatest%3fcb%3d20130626043320&ehk=zkzIy4qV88mZQPBCkxqCzR3wCQ%2flod3w0s7r4E0L2Gw%3d&risl=&pid=ImgRaw&r=0.jpg">
+          </div>
+          
+            <div class="img">
+              <img src="https://th.bing.com/th/id/R.d4c1445220776e3da56732a57707d637?rik=fJXukejPnmjFLg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-G3Cc2UO4aTE%2fUU8UGsDAkOI%2fAAAAAAAANUg%2fPsIYZHmgh38%2fs1600%2fsummer-wars%2bmovie%2bposter.jpg&ehk=7sAUJLI%2fosrrnieBsAzlG%2b9%2fM9A562JEAK%2f7FhLJgUo%3d&risl=&pid=ImgRaw&r=0.jpg">
+            </div>  
+
+            <div class="img">
+              <img src="https://th.bing.com/th/id/OIP.i0J-yZAhxTWEvL2Jt44_wgHaLH?pid=ImgDet&rs=1.jpg">
+            </div>
+      </div>
+      <div class="flex-container2">
+        <div class="img">
+          <img src="https://1.bp.blogspot.com/-a8ichzqylRo/YD8q3tqBhrI/AAAAAAAAO0g/Zhxzo-N3TJ8YxrUVWC3L_qoedX9SyzPsgCLcBGAsYHQ/s400/romance-anime-movies-4.jpg"  >
+        </div>
+       
+          <div class="img">
+            <img src="https://i.pinimg.com/564x/14/2c/d8/142cd87f6664d4d005612fbf27fbeebe.jpg">
+          </div>
+          
+            <div class="img">
+              <img src="https://th.bing.com/th/id/OIP.uy6QUCLd-ITpgqaxqF1QHQHaFS?pid=ImgDet&rs=1.jpg">
+            </div>  
+
+            <div class="img">
+              <img src="https://th.bing.com/th/id/OIP.anWLQYlaRekrnPCYTA-K3AHaJb?pid=ImgDet&rs=1.jpg">
+            </div>
+      </div>
+      <!-- <h2>How majestic.</h2> -->
+    <!-- <nav id="navbar">
+        <div id="logo">
+            <img src=""> -->
+
+        <!-- </div> -->
+        
+    <!-- <section id="home">
+        <h1 class="h-primary">Welcome to Anime World</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ea provident laudantium eaque dolor mollitia explicabo consequuntur sed minima, nemo nostrum recusandae voluptas saepe!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quia dolores eaque.</p>
+        <button class="btn"></button>
+    </section> -->
+    <!-- <section id="Gener">
+     <h1 class="h-primary center">Gener</h1>
+     <div id="Gener">
+        <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Action</a>
+            <a href="#">Drama</a>
+            <a href="#">Romantic</a>
+          </div>
+        
+     </div> -->
+    <!-- </section>
+    <section id="Conntry">
+        <h1 class="h-primary center">Conntry</h1>
+        <div id="Conntry">
+            <button class="dropbtn">Dropdown
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">India</a>
+                <a href="#">Japan</a>
+                <a href="#">Brazil</a>
+              </div>
+            
+        </div>
+    </section> -->
+    <section id="Movie">
+        <h1 class="h-primary center"></h1>
+        <div id="Movie">
+           
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.Myonlineanime.com.All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>
